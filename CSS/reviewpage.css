@@ -1,0 +1,151 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*---------------------- custom codes -------------------------------*/
+:root {
+    --main-background: #F0F0F0;
+    --box-background-color: #FFFFFF;
+    --text-white: white;
+    --red-color: #F71D2A;
+    --box-shadow: 1px 1px 9px rgba(200, 187, 187, 0.55);
+    --btn-color: #0D0940;
+    --headline-text-color: #464646;
+    --paragraph-text-co: #626262;
+    --review-star-color: #C4BCBC;
+}
+
+.reviewbody{
+    margin: auto;
+    margin-top: 100px;
+    width: 700px;
+    height: 520px; 
+    box-shadow: var(--box-shadow);
+}
+
+h5 {
+    padding-top: 30px;
+    background-color: var(--box-background-color);
+    color: var(--headline-text-color);
+    font-size: 20px;
+    text-align: center;
+}
+
+.pic {
+    display: flex;
+    gap: 10px;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+
+.public-name h4 {
+    margin-bottom: 6px;
+}
+
+.popularity-icon {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+    font-size: 25px;
+    color: var(--review-star-color);
+}
+
+
+.form-control {
+    display: flex;
+    margin-left: 30px;
+    width: 90%;
+    /* color: var(--paragraph-text-co); */
+}
+
+/* btn for img add------- */
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn {
+    border: 1px solid var(--review-star-color);
+    background-color: white;
+    padding: 10px 160px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.add-pic {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    color: #3628D6;
+}
+
+.plus-icon {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -80px;
+    color: var(--box-background-color);
+    background-color: #3628D6;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+}
+
+.plus-icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.btn p {
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.cancel,
+.post {
+    padding: 10px 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 1px solid var(--review-star-color);
+    background-color: var(--text-white);
+    float: right;
+    cursor: pointer;
+}
+
+.cancel,
+.post {
+    color: #3628D6;
+}
+
+.cancel:hover,
+.post:hover {
+    background-color: var(--btn-color);
+    color: var(--text-white);
+}
