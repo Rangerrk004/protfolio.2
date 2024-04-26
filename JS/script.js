@@ -138,7 +138,7 @@ jQuery(document).ready(function () {
   });
 });
 
-
+// mouse curser custum
 var circle = document.querySelector("#circle");
 
 
@@ -152,7 +152,27 @@ window.addEventListener("mousemove", function (dets) {
 
 })
 
+// rotate skillsets codes-----------//
+// var active = 3;
+// var mncircle = document.querySelectorAll(".mncircle");
+// gsap.to(mncircle[active - 1], {
+//   opacity: .5
+// })
 
+// mncircle.forEach(function (val) {
+//   val.addEventListener("click", function () {
+//     gsap.to(".SkillSet_box_circle", {
+//       rotate: 90
+//     })
+//   })
+// })
+
+
+gsap.to(".SkillSet_box_circle", {
+  rotate: 0,
+  ease: Expo.easeInOut,
+  duration: 1.5,
+})
 
 
 
