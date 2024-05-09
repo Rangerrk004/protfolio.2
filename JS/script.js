@@ -173,8 +173,32 @@ gsap.to(".SkillSet_box_circle", {
   ease: Expo.easeInOut,
   duration: 1.5,
 })
+// project section -----------------------------------
+let list = document.querySelectorAll('.list');
+let itembox = document.querySelectorAll('.itembox');
+
+for (let i = 0; i < list.length; i++) {
+  list[i].addEventListener('click', function () {
+    for (let j = 0; j < item.length; j++) {
+      list[j].classList.remove('active');
+    }
+    this.classList.add('active');
+
+    let dataFilter = this.getAttribute('data-filter');
+    for (let k = 0; k < itembox; k++) {
+      itembox[k].classList.remove('active');
+      itembox[k].classList.add('hide');
 
 
+      if (itembox[k].getAttribute('data-item') = dataFilter ||
+        dataFilter == "all") {
+        itembox[k].classList.remove('hide');
+        itembox[k].classList.add('active');
+      }
+    }
+
+  })
+}
 
 // const toggleBtn = document.querySelector('.toggle-btn')
 // const toggleBtnIcon = document.querySelector('.toggle-btn i')

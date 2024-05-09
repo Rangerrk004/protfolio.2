@@ -16,12 +16,12 @@
     --black: black;
     --box-bg: #0e011391;
     --lefttoRight-color: linear-gradient(to right,
-            #ba3def,
+            #d289f1,
             #1e022a);
     --ToptoBottom-color: linear-gradient(to bottom,
             #3d0549,
             #1a011e);
-    --title-co: linear-gradient(to right, #440550, rgb(246, 246, 247));
+    --title-co: linear-gradient(to right, #470654, #e294fa);
 }
 
 /* ------------------------------------CUSTOM CODES--------------------------------------- */
@@ -96,9 +96,9 @@ ul li {
 
 .nav-item:hover {
     color: var(--gray);
-    background: linear-gradient(to right, #ba3def, #1e022a);
+    background: var(--lefttoRight-color);
     border-radius: 25px;
-    padding: 0px 15px;
+    padding: 0px 5px;
 }
 
 .nav-item:hover a {
@@ -489,13 +489,86 @@ ul li {
 
 .box-model:hover {
     cursor: pointer;
-    background-color: #0e0113cf;
+    background-color: var(--box-bg);
     border: .5px solid #270336cf;
 }
 
 .box-model:hover img {
     opacity: 1;
 }
+
+/* -----------------------------------------MY RECENT WORKS-------------------------- */
+.bg-circleCo {
+    display: block;
+    position: absolute;
+    background-image: radial-gradient(#280334ec, #dac6e316);
+    box-shadow: 0px 0px 100px #5f1c767d;
+    filter: blur(5px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: 33%;
+    margin-top: 23%;
+    z-index: -1;
+}
+
+.project-list {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-list> li {
+    border-radius: 50px;
+    padding: 10px 25px;
+    color: var(--gray);
+    background-color: var(--box-bg);
+    border: 0.8px solid #1d0227e9;
+    cursor: pointer;
+}
+
+.project-list> li:hover {
+    color: var(--gray);
+    background: var(--lefttoRight-color);
+    border-radius: 25px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.project-list li:active {
+    background-color: var(--lefttoRight-color);
+}
+
+.product {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product .itembox {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    display: block;
+}
+
+.product .itembox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
 
 /* ------------------------------------------ my expreinces  ------------------------ */
 .expreince .ex-1 {
@@ -602,7 +675,7 @@ p {
 }
 
 .social-link-icon i:hover {
-    color: yellow;
+    color: var(--yellow);
 }
 
 
@@ -616,11 +689,6 @@ p {
  -------------------------------*/
 
 @media (max-width: 575.98px) {
-    .navbar-collapse {
-        /* width: 200px; */
-        /* margin-left: 15%; */
-        /* margin-bottom: 15%; */
-    }
 
 
     .media-link {

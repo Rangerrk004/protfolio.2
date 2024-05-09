@@ -13,8 +13,14 @@
     <link rel="stylesheet" href="vendors/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="vendors/slick-slider.css" />
     <link rel="stylesheet" href="./CSS/keyfreams.css">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- <link rel="stylesheet" href="./CSS/style.css"> -->
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .SkillSet_box_circle {
             margin-top: 35%;
             position: absolute;
@@ -98,6 +104,86 @@
             /* opacity: .08; */
             background-color: rgba(176, 176, 176, 0.8);
         }
+
+
+
+        ul {
+            list-style: none;
+        }
+
+
+
+
+        .bg-circleCo {
+            display: block;
+            position: absolute;
+            background-image: radial-gradient(#280334ec, #dac6e316);
+            box-shadow: 0px 0px 100px #5f1c767d;
+            filter: blur(5px);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-left: 33%;
+            margin-top: 23%;
+            z-index: -1;
+        }
+
+        .ul {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        li {
+            border-radius: 50px;
+            padding: 10px 25px;
+            color: var(--gray);
+            background-color: var(--box-bg);
+            border: 0.8px solid #1d0227e9;
+            cursor: pointer;
+        }
+
+        li:hover {
+            color: var(--gray);
+            background: var(--lefttoRight-color);
+            border-radius: 25px;
+            padding: 10px 25px;
+        }
+
+        ul li:active {
+            background-color: var(--lefttoRight-color);
+        }
+
+        .product {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .product .itembox {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 5px;
+            display: block;
+        }
+
+        .product .itembox.hide {
+            display: none;
+        }
+
+        .product .itembox img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -150,7 +236,56 @@
     </section> -->
 
 
+    <section>
+        <div class="container py-5">
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="academy">Academy</li>
+                <li class="list" data-filter="ui-ux">UI-UX</li>
+                <li class="list" data-filter="client">Clinet</li>
+            </ul>
+            <div class="product">
 
+                <div class="itembox" data-item="academy">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+                <div class="itembox" data-item="academy">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+                <div class="itembox" data-item="academy">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+                <div class="itembox" data-item="academy">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+
+
+                <div class="itembox" data-item="ui-ux">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+                <div class="itembox" data-item="ui-ux">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+                <div class="itembox" data-item="ui-ux">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+                <div class="itembox" data-item="ui-ux">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+
+
+                <div class="itembox" data-item="client">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+                <div class="itembox" data-item="client">
+                    <img src="./Img/project.png" alt="" class="img-fluid">
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </section>
 
 
 
@@ -160,7 +295,34 @@
     <script src="vendors/jquery.min.js"></script>
     <script src="vendors/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="./JS/script.js"></script>
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itembox = document.querySelectorAll('.itembox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < item.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+                for (let k = 0; k < itembox; k++) {
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+
+                    if (itemBox[k].getAttribute('data-item') = dataFilter ||
+                        dataFilter == "all") {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+
+            })
+        }
+
+    </script>
 </body>
 
 </html>
