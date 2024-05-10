@@ -200,6 +200,11 @@ for (let i = 0; i < list.length; i++) {
   })
 }
 
+// our AOS animetions codes
+
+
+
+
 // const toggleBtn = document.querySelector('.toggle-btn')
 // const toggleBtnIcon = document.querySelector('.toggle-btn i')
 // const dropDownMenu = document.querySelector('.dropdown-menu')

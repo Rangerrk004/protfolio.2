@@ -586,7 +586,7 @@ ul li {
 }
 
 .ex-1:hover {
-    background: var(--lefttoRight-color);
+    /* background: var(--lefttoRight-color); */
     transition: .5s;
 }
 
