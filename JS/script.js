@@ -173,32 +173,58 @@ gsap.to(".SkillSet_box_circle", {
   ease: Expo.easeInOut,
   duration: 1.5,
 })
+
+
 // project section -----------------------------------
-let list = document.querySelectorAll('.list');
-let itembox = document.querySelectorAll('.itembox');
+const items = document.querySelectorAll("ul li");
+const products = document.querySelectorAll(".products .product");
 
-for (let i = 0; i < list.length; i++) {
-  list[i].addEventListener('click', function () {
-    for (let j = 0; j < item.length; j++) {
-      list[j].classList.remove('active');
-    }
-    this.classList.add('active');
+items.forEach((item) => {
+  // Active
+  item.addEventListener("click", () => {
+    items.forEach((item) => {
+      item.classList.remove("active");
+    });
+    item.classList.add("active");
 
-    let dataFilter = this.getAttribute('data-filter');
-    for (let k = 0; k < itembox; k++) {
-      itembox[k].classList.remove('active');
-      itembox[k].classList.add('hide');
-
-
-      if (itembox[k].getAttribute('data-item') = dataFilter ||
-        dataFilter == "all") {
-        itembox[k].classList.remove('hide');
-        itembox[k].classList.add('active');
+    // Filter
+    const valueAttr = item.getAttribute("data-filter");
+    products.forEach((item) => {
+      item.style.display = "none";
+      if (
+        item.getAttribute("data-filter").toLowerCase() ==
+        valueAttr.toLowerCase() ||
+        valueAttr == "all"
+      ) {
+        item.style.display = "flex";
       }
-    }
+    });
+  });
+});
 
-  })
-}
+
+// for (let i = 0; i < list.length; i++) {
+//   list[i].addEventListener('click', function () {
+//     for (let j = 0; j < item.length; j++) {
+//       list[j].classList.remove('active');
+//     }
+//     this.classList.add('active');
+
+//     let dataFilter = this.getAttribute('data-filter');
+//     for (let k = 0; k < itembox; k++) {
+//       itembox[k].classList.remove('active');
+//       itembox[k].classList.add('hide');
+
+
+//       if (itembox[k].getAttribute('data-item') = dataFilter ||
+//         dataFilter == "all") {
+//         itembox[k].classList.remove('hide');
+//         itembox[k].classList.add('active');
+//       }
+//     }
+
+//   })
+// }
 
 // our AOS animetions codes
 
