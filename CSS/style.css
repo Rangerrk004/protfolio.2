@@ -6,7 +6,7 @@
 }
 
 :root {
-    --head-line: #38005e;
+    --head-line: #100119;
     --gray: #ababab;
     --main-background: #f4f4f4;
     --yellow: rgb(157, 187, 6);
@@ -58,6 +58,14 @@ ul li {
 }
 
 /* ----------------------------------Banner Section codes------------------------------------ */
+header.sticky {
+    background: var(--head-line);
+}
+
+.navbar {
+    background: var(--box-bg);
+}
+
 .logo-name {
     font-family: cinzel;
     font-weight: bold;
@@ -81,13 +89,19 @@ ul li {
     border-radius: 25px;
 }
 
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.toggle-btn i {
+    color: var(--main-background);
+}
 
 .navbar-nav {
     gap: 20px;
-    border-radius: 50px;
-    padding: 0px 15px;
-    background-color: var(--box-bg);
-    border: .8px solid #221925e9;
 }
 
 .nav-link {
@@ -97,7 +111,9 @@ ul li {
 .nav-item:hover {
     color: var(--gray);
     background: var(--lefttoRight-color);
+    /* border-bottom: 1px solid var(--lefttoRight-color); */
     border-radius: 25px;
+    /* width: fit-content; */
     padding: 0px 5px;
 }
 
@@ -105,28 +121,25 @@ ul li {
     color: var(--main-background);
 }
 
-.fixed-bottom {
-    bottom: 15px;
-}
-
-
-/* .navbar {
-    background: linear-gradient(to bottom,
-            #0d0940e0,
-            #00000087);
-} */
-
-/* .navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none !important;
-    box-shadow: none !important;
-} */
-
-.toggle-btn i {
+.nav-btn {
+    background: var(--lefttoRight-color);
     color: var(--main-background);
+    padding: 10px 25px;
+    border-radius: 50px;
 }
 
+.nav-btn:hover {
+    color: var(--main-background);
+    font-weight: 600;
+    background: none;
+    border: 1.5px solid #bc6bdfcf;
+}
+
+.navbar {
+    background: var(--box-bg);
+}
+
+/* --------------------------------------------Hero Section------------------------------------------- */
 .banner {
     background-image: url(../Img/greadent\ graphics.png);
     /* background-size: cover; */
@@ -523,7 +536,7 @@ ul li {
     padding-bottom: 20px;
 }
 
-.filters ul li {
+.filter-btn {
     border-radius: 50px;
     padding: 10px 25px;
     color: var(--gray);
@@ -532,17 +545,13 @@ ul li {
     cursor: pointer;
 }
 
-.filters ul li:hover {
+.filter-btn:hover {
     color: var(--gray);
     background: var(--lefttoRight-color);
     border-radius: 25px;
     padding: 10px 25px;
-    cursor: pointer;
 }
 
-.filters ul li:active {
-    background: var(--lefttoRight-color);
-}
 
 .products {
     margin: auto;
@@ -691,8 +700,9 @@ p {
  -------------------------------*/
 
 @media (max-width: 575.98px) {
-
-
+    header.sticky {
+        background: transparent;
+    }
     .media-link {
         font-size: 10px;
         padding: 0px 10px;
@@ -703,15 +713,22 @@ p {
         justify-content: center;
     }
 
+    .navbar-toggler-icon {
+        width: 0.5em;
+        height: 0.5em;
+    }
+
+    .navbar-nav {
+        border-radius: 15px;
+        padding: 0px 15px;
+        background-color: var(--head-line);
+        /* border: .8px solid #221925e9; */
+    }
 
     .about-pic {
         text-align: center;
     }
 
-    .navbar-toggler-icon {
-        width: 0.5em;
-        height: 0.5em;
-    }
 
     .slide {
         margin: 20px;
@@ -733,9 +750,7 @@ p {
 }
 
 /* // Small devices (landscape phones, less than 768px) */
-@media (max-width: 700px) {
-    
-}
+@media (max-width: 700px) {}
 
 /* // Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
@@ -750,7 +765,12 @@ p {
         justify-content: center;
 
     }
-
+    .navbar-nav {
+        border-radius: 15px;
+        padding: 0px 15px;
+        background-color: var(--head-line);
+        /* border: .8px solid #221925e9; */
+    }
     h1,
     h2 {
         font-size: 20px;
