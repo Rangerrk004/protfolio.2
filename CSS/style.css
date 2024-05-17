@@ -83,7 +83,6 @@ header.sticky {
 
 .media-link:hover {
     color: var(--main-background);
-    font-weight: 600;
     padding: 10px 15px;
     background: var(--lefttoRight-color);
     border-radius: 25px;
@@ -110,27 +109,28 @@ header.sticky {
 
 .nav-item:hover {
     color: var(--gray);
-    background: var(--lefttoRight-color);
-    /* border-bottom: 1px solid var(--lefttoRight-color); */
+    /* background: var(--lefttoRight-color); */
     border-radius: 25px;
-    /* width: fit-content; */
-    padding: 0px 5px;
+    border: 1.5px solid #bc6bdfcf;
+    padding: 0px 10px;
 }
 
 .nav-item:hover a {
     color: var(--main-background);
+    font-weight: 300;
 }
 
 .nav-btn {
     background: var(--lefttoRight-color);
     color: var(--main-background);
-    padding: 10px 25px;
-    border-radius: 50px;
+    padding: 0px 20px;
+    border: none;
+    border-radius: 25px;
 }
 
 .nav-btn:hover {
     color: var(--main-background);
-    font-weight: 600;
+    font-weight: 300;
     background: none;
     border: 1.5px solid #bc6bdfcf;
 }
@@ -149,9 +149,9 @@ header.sticky {
 }
 
 .h-main-box {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     /* margin-top: 200px; */
     margin-left: 75px;
 }
@@ -280,6 +280,14 @@ header.sticky {
     }
 }
 
+#downloadButton {
+    margin-top: 30px;
+    color: var(--gray);
+    background: var(--head-line);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
 
 /* Box cube animation codes here------------- */
 
@@ -703,6 +711,7 @@ p {
     header.sticky {
         background: transparent;
     }
+
     .media-link {
         font-size: 10px;
         padding: 0px 10px;
@@ -747,6 +756,11 @@ p {
     .bg-circleCo {
         display: none;
     }
+
+    .filters ul {
+        gap: 10px;
+    }
+
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -765,12 +779,14 @@ p {
         justify-content: center;
 
     }
+
     .navbar-nav {
         border-radius: 15px;
         padding: 0px 15px;
         background-color: var(--head-line);
         /* border: .8px solid #221925e9; */
     }
+
     h1,
     h2 {
         font-size: 20px;

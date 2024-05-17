@@ -152,20 +152,7 @@ window.addEventListener("mousemove", function (dets) {
 
 })
 
-// rotate skillsets codes-----------//
-// var active = 3;
-// var mncircle = document.querySelectorAll(".mncircle");
-// gsap.to(mncircle[active - 1], {
-//   opacity: .5
-// })
 
-// mncircle.forEach(function (val) {
-//   val.addEventListener("click", function () {
-//     gsap.to(".SkillSet_box_circle", {
-//       rotate: 90
-//     })
-//   })
-// })
 
 
 gsap.to(".SkillSet_box_circle", {
@@ -173,6 +160,20 @@ gsap.to(".SkillSet_box_circle", {
   ease: Expo.easeInOut,
   duration: 1.5,
 })
+
+// hero download btn
+
+const downloadButton = document.getElementById("downloadButton");
+downloadButton.addEventListener("click", function () {
+  const fileUrl = "lena resume mere bhsi.pdf";
+  const fileName = "My Resume.pdf";
+
+  const link = document.createElement("a");
+  link.href = fileUrl;
+  link.download = fileName;
+
+  link.click();
+});
 
 
 // project section -----------------------------------
