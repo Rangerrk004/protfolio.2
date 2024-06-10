@@ -30,6 +30,11 @@ body {
     background: var(--black);
 }
 
+main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .title {
     background: var(--title-co);
     -webkit-background-clip: text;
@@ -290,14 +295,15 @@ header.sticky {
 }
 
 /* Box cube animation codes here------------- */
-.profile-herosec{
+.profile-herosec {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.profile-herosec img{
-    background: var(--head-line);
-    border-radius: 150px 0px 20px 0px;
+
+.profile-herosec img {
+    background: var(--box-bg);
+    border-radius: 20px;
     width: 300px;
 }
 
@@ -460,9 +466,11 @@ header.sticky {
     border: 0.1px solid var(--gray);
     cursor: pointer;
 }
-.card:hover img{
+
+.card:hover img {
     background-color: var(--box-bg);
 }
+
 .card-text {
     font-size: 15px;
     transform: rotate(0deg);
@@ -722,6 +730,11 @@ p {
 /*------------------------------
         meadia quries
  -------------------------------*/
+@media (max-width: 510px) {
+    .banner>* .row {
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 575.98px) {
     header.sticky {
@@ -748,6 +761,10 @@ p {
         padding: 0px 15px;
         background-color: var(--head-line);
         /* border: .8px solid #221925e9; */
+    }
+
+    .banner>* .row {
+        flex-direction: column;
     }
 
     .about-pic {

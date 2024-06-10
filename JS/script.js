@@ -161,19 +161,6 @@ gsap.to(".SkillSet_box_circle", {
   duration: 1.5,
 })
 
-// hero download btn
-
-const downloadButton = document.getElementById("downloadButton");
-downloadButton.addEventListener("click", function () {
-  const fileUrl = "lena resume mere bhsi.pdf";
-  const fileName = "My Resume.pdf";
-
-  const link = document.createElement("a");
-  link.href = fileUrl;
-  link.download = fileName;
-
-  link.click();
-});
 
 
 // project section -----------------------------------
