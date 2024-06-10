@@ -290,6 +290,16 @@ header.sticky {
 }
 
 /* Box cube animation codes here------------- */
+.profile-herosec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-herosec img{
+    background: var(--head-line);
+    border-radius: 150px 0px 20px 0px;
+    width: 300px;
+}
 
 .bg-cube {
     display: flex;
@@ -424,6 +434,8 @@ header.sticky {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    border: 0.8px solid var(--gray);
+    border-radius: 50%;
 }
 
 .card img {
@@ -442,14 +454,17 @@ header.sticky {
 .my-profile .card:hover {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform: rotate(0deg);
-    opacity: 1;
+    opacity: 0.8;
     scale: 1.2;
-    background: var(--ToptoBottom-color);
-    border: 0.2px solid var(--gray);
+    background: var(--box-bg);
+    border: 0.1px solid var(--gray);
     cursor: pointer;
 }
-
+.card:hover img{
+    background-color: var(--box-bg);
+}
 .card-text {
+    font-size: 15px;
     transform: rotate(0deg);
     padding: 10px 10px;
     color: var(--gray);
@@ -669,20 +684,21 @@ p {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: white;
+    background-color: var(--box-bg);
     border-radius: 25%;
-    box-shadow: -1px -1px 4px 1px rgba(207, 198, 198, 0.507);
+    /* box-shadow: -1px -1px 4px 1px rgba(207, 198, 198, 0.507); */
 }
 
 .social-link-footer:hover {
     background-color: #000000;
     transform: scale(1.5) 0.5s;
-    box-shadow: -1px -1px 4px 1px rgba(173, 166, 166, 0.507);
+    border: 1.5px solid #bc6bdfcf;
+    /* box-shadow: -1px -1px 4px 1px rgba(173, 166, 166, 0.507); */
 }
 
 .social-link-icon i {
     font-size: 20px;
-    color: black;
+    color: var(--gray);
 }
 
 .site-link ul {
