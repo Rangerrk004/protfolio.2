@@ -234,85 +234,11 @@ items.forEach((item) => {
 // }
 
 
-// alert('Hi please reload now ');
-
-console.log("Abhijit Sarkar");
-
-
-
-// booliyan
-// console.log(profile.Isfollow);
-isFlowe = true;
-console.log(isFlowe);
-
-const profile = {
-  fullName: "abhijit",
-  cgps: 20,
-  Isfollow: true,
-};
-// name change typs to other name
-profile["cgps"] = profile["cgps"] + 2;
-
-console.log(profile["cgps"]);
-
-
-// Oparetors
-
-// let a = 5;
-// let b = 6;
-// console.log("a=", a, "b=", b);
-// console.log('a+b =', a + b);
-// console.log('a-b =', a - b);
-// console.log('a/b =', a / b);
-// console.log('a * b =', a * b);
-// modulus
-// console.log('a % b =', a % b);
-// expon
-// console.log('a ** b =', a ** b);
-
-// unary oparator
-let a = 5;
-let b = 6;
-
-
-console.log("a=", a, "b=", b);
-console.log("a-- =", a--);
-console.log("a", a);
-
-
-// assigment oparator
-
-let c = 7;
-let d = 8;
-// c **= 2;
-console.log("c==d", c == d);
-
-
-
-// loops & strings  here down bellow
-
-for (let i = 1; i <= 5; i++) {
-  console.log("i =", i);
-}
-
-
-let sum = 0;
-for (let i = 1; i <= 5; i++) {
-  sum = sum + i;
-}
-console.log("sum =", sum);
-
 
 
 
 // Functions
 
-function abhijitAditi(msg) {
-  console.log(msg);
-
-}
-
-abhijitAditi("I love you");
 
 
 

@@ -20,7 +20,7 @@
     --ToptoBottom-color: linear-gradient(to bottom,
             #3d0549,
             #1a011e);
-    --title-co: linear-gradient(to right, #470654, #e294fa);
+    --title-co: rgb(242, 239, 239);
 }
 
 /* ------------------------------------CUSTOM CODES--------------------------------------- */
@@ -79,7 +79,7 @@ header.sticky {
     animation: slideright 3s ease forwards;
 }
 
-.media-link {
+/* .media-link {
     color: var(--gray);
     padding: 0px 20px;
     animation: slidebottom 3s ease forwards;
@@ -90,7 +90,7 @@ header.sticky {
     padding: 10px 15px;
     background: var(--lefttoRight-color);
     border-radius: 25px;
-}
+} */
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -104,7 +104,8 @@ header.sticky {
 }
 
 .navbar-nav {
-    gap: 20px;
+    max-width: 700px;
+    gap: 40px;
 }
 
 .nav-link {
@@ -112,11 +113,12 @@ header.sticky {
 }
 
 .nav-item:hover {
+    display: block;
     color: var(--gray);
     /* background: var(--lefttoRight-color); */
     border-radius: 25px;
-    border: 1.5px solid #bc6bdfcf;
-    padding: 0px 10px;
+    border: 1px solid #bc6bdfcf;
+    padding: 0px 5px;
 }
 
 .nav-item:hover a {
@@ -127,7 +129,7 @@ header.sticky {
 .nav-btn {
     background: var(--lefttoRight-color);
     color: var(--main-background);
-    padding: 0px 20px;
+    padding: 5px 20px;
     border: none;
     border-radius: 25px;
 }
@@ -142,6 +144,7 @@ header.sticky {
 .navbar {
     background: var(--box-bg);
 }
+
 
 /* --------------------------------------------Hero Section------------------------------------------- */
 .banner {
@@ -180,6 +183,29 @@ header.sticky {
 .scroll-d-p {
     transform: rotate(0deg);
     color: var(--gray);
+}
+
+.sociallink {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.socialpage {
+    border-radius: 50px;
+    padding: 5px 10px;
+    border: 1px solid var(--gray);
+}
+
+.socialpage:hover {
+    border: 1px solid #bc6bdfcf;
+    background: var(--yellow2);
+    cursor: pointer;
+}
+
+.socialpage:hover i {
+    color: var(--black);
 }
 
 /* typing  text animetion codes here */
@@ -284,6 +310,10 @@ header.sticky {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
+}
+
+#downloadButton:hover a {
+    color: var(--yellow);
 }
 
 /* Hero side codes here------------- */
@@ -461,7 +491,7 @@ header.sticky {
 }
 
 .filter-btn:hover {
-    color: var(--gray);
+    color: white;
     background: var(--lefttoRight-color);
     border-radius: 25px;
     padding: 10px 25px;
@@ -590,12 +620,16 @@ label {
     width: 450px;
 }
 
+label {
+    margin-bottom: 10px;
+}
+
 input {
     width: 100%;
     background: transparent;
     border: none;
     border-bottom: 1px solid var(--gray);
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 textarea,
@@ -627,7 +661,7 @@ input {
 /*------------------------------
         meadia quries
  -------------------------------*/
-@media (max-width: 510px) {
+@media (max-width: 320px) {
     .banner>* .row {
         flex-direction: column;
     }
